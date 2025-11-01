@@ -1,7 +1,7 @@
 import { Component, computed, input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { Product } from '../../../model/productData';
+import { Product } from '../../../../model/productData';
 
 @Component({
   selector: 'app-card',

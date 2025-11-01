@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../model/productData';
-import { CardComponent } from '../coponents/card/card.component';
 import { RouterLink } from "@angular/router";
 import { MatButtonModule } from '@angular/material/button';
+import { CardComponent } from './components/card/card.component';
 
 @Component({
   selector: 'app-list',
