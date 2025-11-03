@@ -1,7 +1,9 @@
-<form [formGroup]="form" (submit)="onSubmit()">
-  <mat-form-field>
-    <mat-label>Título</mat-label>
-    <input matInput formControlName="title" placeholder="Título">
-  </mat-form-field>
-  <button type="submit">Salvar</button>
+<form [formGroup]="form" (submit)="onSubmit()" class="form-container">
+  <div class="form-content-container">
+    <mat-form-field>
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="title" placeholder="Título">
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Salvar</button>
+  </div>
 </form>
