@@ -1,17 +1,15 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../model/productData';
+import { FormComponent } from '../../shared/form/form.component';
 
 @Component({
   selector: 'app-edt',
   standalone: true,
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
+  imports: [FormComponent],
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.scss'
 })
@@ -22,17 +20,10 @@ export class EditComponent {
 
   product: Product = inject(ActivatedRoute).snapshot.data['product']
 
-  form = new FormGroup({
-    title: new FormControl<string>(this.product.title, {
-      nonNullable: true,
-      validators: [Validators.required, Validators.minLength(3)]
-    })
-  })
-
-  onSubmit() {
-    this.productService.putProducts(this.product.id, {
-      title: this.form.controls.title.value
-    })
+  onSubmit(product: Product) {
+    this.productService.putProducts(this.product.id,
+      product
+    )
       .subscribe(() => {
         this.snackBarRef.open('Produto editado com sucesso!', 'X');
         this.router.navigateByUrl('/')

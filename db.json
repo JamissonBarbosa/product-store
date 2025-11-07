@@ -1,12 +1,16 @@
 {
   "products": [
     {
-      "id": "0c67",
-      "title": "notebook"
+      "title": "notebook vaio",
+      "id": "0c67"
     },
     {
       "id": "5460",
       "title": "T-shirt"
+    },
+    {
+      "id": "e0ef",
+      "title": "Teclado Mecânico"
     }
   ]
 }
