@@ -37,6 +37,5 @@ export class CreateComponent {
         this.snackBarRef.open('Produto salvo com sucesso!', 'X');
         this.router.navigateByUrl('/')
       })
-
   }
 }
