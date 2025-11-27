@@ -12,7 +12,13 @@ import { Product } from '../../../../model/productData';
 })
 export class CardComponent {
   @Output() edit = new EventEmitter()
+  @Output() delete = new EventEmitter()
+
   product = input.required<Product>()
 
   productTitile = computed(() => this.product().title)
+
+  onDelete() {
+    this.delete.emit()
+  }
 }
