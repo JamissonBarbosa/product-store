@@ -6,6 +6,12 @@ import { ProductService } from './services/product.service';
 export const routes: Routes = [
   {
     path: '',
+    resolve: {
+      products: () => {
+        const productService = inject(ProductService)
+        return productService.getAllProducts()
+      }
+    },
     component: ListComponent
   },
   {
