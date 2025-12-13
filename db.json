@@ -1,3 +1,12 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "e29f",
+      "title": "Notebook Gamer G15"
+    },
+    {
+      "id": "3ee3",
+      "title": "Placa de Video 4050 Nvidea"
+    }
+  ]
 }

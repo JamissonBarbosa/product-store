@@ -18,10 +18,6 @@ export class CreateComponent {
   snackBarRef = inject(MatSnackBar)
   router = inject(Router)
 
-
-
-
-
   onSubmit(product: Product) {
     this.productService.postProducts(product)
       .subscribe(() => {
