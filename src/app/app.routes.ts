@@ -1,9 +1,7 @@
-import { ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ListComponent } from './feature/list/list.component';
-import { inject } from '@angular/core';
-import { ProductService } from './services/product.service';
 import { getProductsResolver } from './shared/resolvers/get-products.resolver';
-import { get } from 'http';
+
 import { getProductResolver } from './shared/resolvers/get-product.resolver';
 
 export const routes: Routes = [
